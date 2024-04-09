@@ -10,7 +10,7 @@ def createGraph(data):
 
     index = 0
     for i in data:
-        axes.plot(i.keys(), i.values(), '.-', label='zone '+str(index))
+        axes.plot(i.keys(), i.values(), '.-', label='zone '+str(index+1))
         index += 1
 
     axes.legend()
