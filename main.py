@@ -1,7 +1,7 @@
 import tkinter as tk
 import random as rand
 
-from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg, NavigationToolbar2Tk)
+from matplotlib.backends.backend_tkagg import (FigureCanvasTkAgg)
 
 import graph
 

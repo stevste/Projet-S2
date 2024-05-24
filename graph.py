@@ -1,7 +1,8 @@
-import random as rand
+import data as dt
 import matplotlib.pyplot as plt
 
-def createGraph(data):
+def createGraph():
+    data = dt.getTemperatures(1, 20)
     fig = plt.figure(figsize=(6, 4), dpi=100)
     axes = fig.add_subplot()
     axes.set_title('Évolution des températures')
