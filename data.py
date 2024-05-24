@@ -1,8 +1,10 @@
 import sqlite3 as sql
+import datetime as dt
 
-def getTemperatures(dateDebut : int=1, delta : int=1) -> list :
+def getTemperatures(dateDebut : dt.datetime, delta : int=1) -> list :
     connexion = sql.connect("bdd test.db")
     curs = connexion.cursor()
+    delta = dt.timedelta(0, 3600 * delta)
     curs.execute("SELECT * FROM TEMPERATURE WHERE date BETWEEN " + str(dateDebut) + " AND "+ str(dateDebut + delta) + " ORDER BY idCapteur ASC")
     liste = curs.fetchall()
     dicoList = []
